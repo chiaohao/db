@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deliverTime: MyText
+  deliverExpense: 1
+
+two:
+  deliverTime: MyText
+  deliverExpense: 1

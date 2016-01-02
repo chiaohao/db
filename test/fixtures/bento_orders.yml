@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orderDate: 2016-01-02
+  totalPrice: 1
+  customer_id: 1
+  pretty_id: 1
+  payWay_id: 1
+  deliverTime_id: 1
+
+two:
+  orderDate: 2016-01-02
+  totalPrice: 1
+  customer_id: 1
+  pretty_id: 1
+  payWay_id: 1
+  deliverTime_id: 1

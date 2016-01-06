@@ -1,0 +1,18 @@
+<h1>Modify a payway</h1>
+<%= form_for @pay_way, :url => {:controller => "pay_way", :action => "updating", :id => @pay_way.id} do |f| %>
+<div class="field">
+	<%= f.label :payWay %>
+	<br>
+	<%= f.text_field :payWay %>
+</div>
+<div class="field">
+	<%= f.label :fee %>
+	<br>
+	<%= f.text_field :fee %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/pay_way'  %></p>

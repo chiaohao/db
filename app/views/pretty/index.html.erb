@@ -1,0 +1,20 @@
+<h1>All Pretty</h1>
+<table border='2'>
+	<tr>
+		<td>name</td>
+		<td>prettyStyle</td>
+		<td>strength</td>
+		<td>city</td>
+		<td>edit / delete</td>
+	</tr>
+	<% @pretties.each do |t| %>
+		<tr>
+			<td><%= t.name %></td>
+			<td><%= t.prettyStyle %></td>
+			<td><%= t.strength %></td>
+			<td><%= t.city %></td>
+			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>
+		</tr>
+	<% end %>
+</table>
+<p><%= link_to 'Create new pretty', 'pretty/newpretty' %></p>

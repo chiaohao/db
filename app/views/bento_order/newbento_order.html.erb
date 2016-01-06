@@ -1,0 +1,38 @@
+<h1>Add a new bento order</h1>
+<%= form_for @bentoOrder, :url => {:controller => "bento_order", :action => "create"} do |f| %>
+<div class="field">
+	<%= f.label :orderDate %>
+	<br>
+	<%= f.text_field :orderDate %>
+</div>
+<div class="field">
+	<%= f.label :totalPrice %>
+	<br>
+	<%= f.text_field :totalPrice %>
+</div>
+<div class="field">
+	<%= f.label :customer_id %>
+	<br>
+	<%= f.text_field :customer_id %>
+</div>
+<div class="field">
+	<%= f.label :pretty_id %>
+	<br>
+	<%= f.text_field :pretty_id %>
+</div>
+<div class="field">
+	<%= f.label :payWay_id %>
+	<br>
+	<%= f.text_field :payWay_id %>
+</div>
+<div class="field">
+	<%= f.label :deliverTime_id %>
+	<br>
+	<%= f.text_field :deliverTime_id %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/bento_order'  %></p>

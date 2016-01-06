@@ -1,0 +1,24 @@
+<h1>All Customer</h1>
+<table border='2'>
+	<tr>
+		<td>cname</td>
+		<td>account</td>
+		<td>password</td>
+		<td>city</td>
+		<td>address</td>
+		<td>phone</td>
+		<td>edit / delete</td>
+	</tr>
+	<% @customers.each do |t| %>
+		<tr>
+			<td><%= t.cname %></td>
+			<td><%= t.account %></td>
+			<td><%= t.password %></td>
+			<td><%= t.city %></td>
+			<td><%= t.address %></td>
+			<td><%= t.phone %></td>
+			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>
+		</tr>
+	<% end %>
+</table>
+<p><%= link_to 'Create new customer', 'customer/newcustomer' %></p>

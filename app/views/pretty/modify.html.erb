@@ -1,0 +1,28 @@
+<h1>Modify a pretty</h1>
+<%= form_for @pretty, :url => {:controller => "pretty", :action => "updating", :id => @pretty.id} do |f| %>
+<div class="field">
+	<%= f.label :name %>
+	<br>
+	<%= f.text_field :name %>
+</div>
+<div class="field">
+	<%= f.label :prettyStyle %>
+	<br>
+	<%= f.text_field :prettyStyle %>
+</div>
+<div class="field">
+	<%= f.label :strength %>
+	<br>
+	<%= f.text_field :strength %>
+</div>
+<div class="field">
+	<%= f.label :city %>
+	<br>
+	<%= f.text_field :city %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/pretty'  %></p>

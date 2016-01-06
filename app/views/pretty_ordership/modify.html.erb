@@ -1,0 +1,18 @@
+<h1>Modify a pretty-ordership</h1>
+<%= form_for @po, :url => {:controller => "pretty_ordership", :action => "updating", :id => @po.id} do |f| %>
+<div class="field">
+	<%= f.label :pretty_id %>
+	<br>
+	<%= f.text_field :pretty_id %>
+</div>
+<div class="field">
+	<%= f.label :order_id %>
+	<br>
+	<%= f.text_field :order_id %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/pretty_ordership'  %></p>

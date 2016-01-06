@@ -1,0 +1,16 @@
+<h1>All Payway</h1>
+<table border='2'>
+	<tr>
+		<td>payWay</td>
+		<td>fee</td>
+		<td>edit / delete</td>
+	</tr>
+	<% @pay_ways.each do |t| %>
+		<tr>
+			<td><%= t.payWay %></td>
+			<td><%= t.fee %></td>
+			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>
+		</tr>
+	<% end %>
+</table>
+<p><%= link_to 'Create new payway', 'pay_way/newpay_way' %></p>

@@ -24,6 +24,6 @@ class BentoOrderController < ApplicationController
 		redirect_to(:action => "index")
 	end
 	def boparam
-		params.require(:bento_order).permit(:orderDate, :totalPrice, :customer_id, :pretty_id, :payWay_id, :deliverTime_id)
+		params.require(:bento_order).permit(:orderDate, :totalPrice, :customer_id, :payWay_id, :deliverTime_id)
 	end
 end

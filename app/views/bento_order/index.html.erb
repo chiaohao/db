@@ -4,7 +4,6 @@
 		<td>orderDate</td>
 		<td>totalPrice</td>
 		<td>customer_id</td>
-		<td>pretty_id</td>
 		<td>payWay_id</td>
 		<td>deliverTime_id</td>
 		<td>edit / delete</td>
@@ -14,7 +13,6 @@
 			<td><%= t.orderDate %></td>
 			<td><%= t.totalPrice %></td>
 			<td><%= t.customer_id %></td>
-			<td><%= t.pretty_id %></td>
 			<td><%= t.payWay_id %></td>
 			<td><%= t.deliverTime_id %></td>
 			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>

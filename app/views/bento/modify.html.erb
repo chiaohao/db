@@ -1,0 +1,22 @@
+<h1>Modify a bento information</h1>
+<%= form_for @bento, :url => {:controller => "bento", :action => "updating", :id => @bento.id} do |f| %>
+<div class="field">
+	<%= f.label :item_name %>
+	<br>
+	<%= f.text_field :item_name %>
+</div>
+<div class="field">
+	<%= f.label :price %>
+	<br>
+	<%= f.text_field :price %>
+</div>
+<div class="field">
+	<%= f.label :bentoshop_id %>
+	<br>
+	<%= f.text_field :bentoshop_id %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/bento'  %></p>

@@ -48,6 +48,46 @@ Rails.application.routes.draw do
   put 'pretty_ordership/updating/:id' => 'pretty_ordership#updating'
   put 'pretty_ordership/destroying/:id' => 'pretty_ordership#destroying'
   resources :pretty_ordership
+
+  get 'bentoshop/newshop'
+  get 'bentoshop' => 'bentoshop#index'
+  get 'bentoshop/modify/:id' => 'bentoshop#modify'
+  get 'bentoshop/delete/:id' => 'bentoshop#delete'
+  post 'bentoshop/create'
+  patch 'bentoshop/updating/:id' => 'bentoshop#updating'
+  put 'bentoshop/updating/:id' => 'bentoshop#updating'
+  put 'bentoshop/destroying/:id' => 'bentoshop#destroying'
+  resources :bentoshop
+
+  get 'deliver_time/newtime'
+  get 'deliver_time' => 'deliver_time#index'
+  get 'deliver_time/modify/:id' => 'deliver_time#modify'
+  get 'deliver_time/delete/:id' => 'deliver_time#delete'
+  post 'deliver_time/create'
+  patch 'deliver_time/updating/:id' => 'deliver_time#updating'
+  put 'deliver_time/updating/:id' => 'deliver_time#updating'
+  put 'deliver_time/destroying/:id' => 'deliver_time#destroying'
+  resources :deliver_time
+
+  get 'bento/newbento'
+  get 'bento' => 'bento#index'
+  get 'bento/modify/:id' => 'bento#modify'
+  get 'bento/delete/:id' => 'bento#delete'
+  post 'bento/create'
+  patch 'bento/updating/:id' => 'bento#updating'
+  put 'bento/updating/:id' => 'bento#updating'
+  put 'bento/destroying/:id' => 'bento#destroying'
+  resources :bento
+
+  get 'order_detail/newdetail'
+  get 'order_detail' => 'order_detail#index'
+  get 'order_detail/modify/:id' => 'order_detail#modify'
+  get 'order_detail/delete/:id' => 'order_detail#delete'
+  post 'order_detail/create'
+  patch 'order_detail/updating/:id' => 'order_detail#updating'
+  put 'order_detail/updating/:id' => 'order_detail#updating'
+  put 'order_detail/destroying/:id' => 'order_detail#destroying'
+  resources :order_detail
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

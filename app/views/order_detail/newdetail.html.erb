@@ -1,0 +1,22 @@
+<h1>Add a order detail</h1>
+<%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+<div class="field">
+	<%= f.label :order_id %>
+	<br>
+	<%= f.text_field :order_id %>
+</div>
+<div class="field">
+	<%= f.label :item_id %>
+	<br>
+	<%= f.text_field :item_id %>
+</div>
+<div class="field">
+	<%= f.label :num %>
+	<br>
+	<%= f.text_field :num %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/order_detail'  %></p>

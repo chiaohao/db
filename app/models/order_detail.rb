@@ -1,4 +1,4 @@
 class OrderDetail < ActiveRecord::Base
-	belong_to :bentoOrder
-	belong_to :bento
+	belongs_to :bentoOrder
+	belongs_to :bento
 end

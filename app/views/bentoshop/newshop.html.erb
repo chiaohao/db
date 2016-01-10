@@ -1,0 +1,27 @@
+<h1>Add a bento shop</h1>
+<%= form_for @bentoshop, :url => {:controller => "bentoshop", :action => "create"} do |f| %>
+<div class="field">
+	<%= f.label :shop_name %>
+	<br>
+	<%= f.text_field :shop_name %>
+</div>
+<div class="field">
+	<%= f.label :address %>
+	<br>
+	<%= f.text_field :address %>
+</div>
+<div class="field">
+	<%= f.label :phone %>
+	<br>
+	<%= f.text_field :phone %>
+</div>
+<div class="field">
+	<%= f.label :city %>
+	<br>
+	<%= f.text_field :city %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/bentoshop'  %></p>

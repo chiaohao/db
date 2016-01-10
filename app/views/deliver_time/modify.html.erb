@@ -1,0 +1,17 @@
+<h1>Modify a deliver time</h1>
+<%= form_for @deliverTime, :url => {:controller => "deliver_time", :action => "updating", :id => @deliverTime.id} do |f| %>
+<div class="field">
+	<%= f.label :deliverTime %>
+	<br>
+	<%= f.text_field :deliverTime %>
+</div>
+<div class="field">
+	<%= f.label :deliverExpense %>
+	<br>
+	<%= f.text_field :deliverExpense %>
+</div>
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to 'Back', '/deliver_time'  %></p>

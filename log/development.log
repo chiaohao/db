@@ -4678,3 +4678,2062 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (24.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePrettyIdFromBentoOrders (20160107014101)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (33.5ms)[0m  [1mALTER TABLE "bento_orders" DROP "pretty_id"[0m
+  [1m[35mSQL (18.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160107014101"]]
+  [1m[36m (99.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bento_orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bentos'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'bentoshops'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'customers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'deliver_times'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'order_details'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pay_ways'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pretties'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pretty_orderships'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2016-01-07 14:07:12 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-07 14:07:25 +0800
+Processing by PrettyController#index as HTML
+  [1m[35mPretty Load (2.1ms)[0m  SELECT "pretties".* FROM "pretties"
+  Rendered pretty/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 866ms (Views: 857.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-07 14:07:26 +0800
+
+
+Started GET "/pretty/newpretty" for ::1 at 2016-01-07 14:07:35 +0800
+Processing by PrettyController#newpretty as HTML
+  Rendered pretty/newpretty.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 48ms (Views: 39.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/pretty/create" for ::1 at 2016-01-07 14:07:51 +0800
+Processing by PrettyController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gtg4ZjUY0LrfaKxQR5dTg4cr2w9QNGmWYkuEL1Q4+Rvg+K3RCKQzH/lVtES1wGOGApIeYl40DkTESl0YHmbwrg==", "pretty"=>{"name"=>"Sunny", "prettyStyle"=>"cute", "strength"=>"100", "city"=>"Taichung"}, "commit"=>"Create Pretty"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (27.8ms)[0m  INSERT INTO "pretties" ("name", "prettyStyle", "strength", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Sunny"], ["prettyStyle", "cute"], ["strength", 100], ["city", "Taichung"], ["created_at", "2016-01-07 06:07:51.935192"], ["updated_at", "2016-01-07 06:07:51.935192"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pretty
+Completed 302 Found in 36ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-07 14:07:51 +0800
+Processing by PrettyController#index as HTML
+  [1m[35mPretty Load (0.3ms)[0m  SELECT "pretties".* FROM "pretties"
+  Rendered pretty/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pretty/modify/1" for ::1 at 2016-01-07 14:07:55 +0800
+Processing by PrettyController#modify as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPretty Load (0.2ms)[0m  [1mSELECT  "pretties".* FROM "pretties" WHERE "pretties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pretty/modify.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-07 14:07:57 +0800
+Processing by PrettyController#index as HTML
+  [1m[35mPretty Load (0.2ms)[0m  SELECT "pretties".* FROM "pretties"
+  Rendered pretty/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pretty/delete/1" for ::1 at 2016-01-07 14:07:59 +0800
+Processing by PrettyController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPretty Load (0.2ms)[0m  [1mSELECT  "pretties".* FROM "pretties" WHERE "pretties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "pretties" WHERE "pretties"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/pretty
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-07 14:07:59 +0800
+Processing by PrettyController#index as HTML
+  [1m[36mPretty Load (0.2ms)[0m  [1mSELECT "pretties".* FROM "pretties"[0m
+  Rendered pretty/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pretty/newpretty" for ::1 at 2016-01-07 14:08:04 +0800
+Processing by PrettyController#newpretty as HTML
+  Rendered pretty/newpretty.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pretty/create" for ::1 at 2016-01-07 14:08:16 +0800
+Processing by PrettyController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29bF1r9mp2OAopRKE5MzQWHumyk4SpcNhoo0mZhnJHkh9lBhgtpExqafjF7hxANE5FdeRDZK8N8gi+2u0jktzA==", "pretty"=>{"name"=>"sunny孫", "prettyStyle"=>"", "strength"=>"", "city"=>""}, "commit"=>"Create Pretty"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pretties" ("name", "prettyStyle", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sunny孫"], ["prettyStyle", ""], ["city", ""], ["created_at", "2016-01-07 06:08:16.465420"], ["updated_at", "2016-01-07 06:08:16.465420"]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/pretty
+Completed 302 Found in 8ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-07 14:08:16 +0800
+Processing by PrettyController#index as HTML
+  [1m[36mPretty Load (0.2ms)[0m  [1mSELECT "pretties".* FROM "pretties"[0m
+  Rendered pretty/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pretty/newpretty" for ::1 at 2016-01-07 14:14:25 +0800
+Processing by PrettyController#newpretty as HTML
+  Rendered pretty/newpretty.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 265ms (Views: 257.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pretty/newpretty" for ::1 at 2016-01-07 14:14:25 +0800
+Processing by PrettyController#newpretty as HTML
+  Rendered pretty/newpretty.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-07 14:14:25 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-07 14:14:25 +0800
+
+
+Started GET "/pretty/modify/2" for ::1 at 2016-01-07 14:14:30 +0800
+Processing by PrettyController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPretty Load (0.3ms)[0m  SELECT  "pretties".* FROM "pretties" WHERE "pretties"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pretty/modify.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pretty/modify/2" for ::1 at 2016-01-07 14:14:30 +0800
+Processing by PrettyController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPretty Load (0.2ms)[0m  [1mSELECT  "pretties".* FROM "pretties" WHERE "pretties"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pretty/modify.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/phone/index" for ::1 at 2016-01-08 02:14:30 +0800
+
+ActionController::RoutingError (No route matches [GET] "/phone/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (114.3ms)
+
+
+Started GET "/pretty" for ::1 at 2016-01-10 13:53:21 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (24.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PrettyController#index as HTML
+  [1m[35mPretty Load (0.6ms)[0m  SELECT "pretties".* FROM "pretties"
+  Rendered pretty/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 551ms (Views: 506.8ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 13:53:22 +0800
+
+
+Started GET "/" for ::1 at 2016-01-10 14:08:51 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 20ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:08:57 +0800
+Processing by BentoshopController#index as HTML
+  [1m[35mBentoshop Load (25.4ms)[0m  SELECT "bentoshops".* FROM "bentoshops"
+  Rendered bentoshop/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 305ms (Views: 271.9ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 14:09:02 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a bento shop</h1>
+    2: <%= form_for @customer, :url => {:controller => "bentoshop", :action => "create", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :shop_name %>
+    5: 	<br>
+  app/views/bentoshop/newshop.html.erb:2:in `_app_views_bentoshop_newshop_html_erb___166320958667908213_70342820564960'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.0ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 14:09:02 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a bento shop</h1>
+    2: <%= form_for @customer, :url => {:controller => "bentoshop", :action => "create", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :shop_name %>
+    5: 	<br>
+  app/views/bentoshop/newshop.html.erb:2:in `_app_views_bentoshop_newshop_html_erb___166320958667908213_70342830574340'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.5ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 14:09:52 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 14:09:52 +0800
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:09:54 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.2ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 14:09:56 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bentoshop/create" for ::1 at 2016-01-10 14:10:21 +0800
+Processing by BentoshopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"McOoQ8q3KQJddAAnjTHPil6llDIzQjH0y8StBlhg6NrL4z309wvKp3tJGDN/Zv+P2xxRXz1CViZtxXQxEj7hbw==", "bentoshop"=>{"shop_name"=>"大水源", "address"=>"羅斯福路", "phone"=>"0982342814", "city"=>"taipei"}, "commit"=>"Create Bentoshop"}
+  [1m[35m (11.3ms)[0m  BEGIN
+  [1m[36mSQL (30.1ms)[0m  [1mINSERT INTO "bentoshops" ("shop_name", "address", "phone", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["shop_name", "大水源"], ["address", "羅斯福路"], ["phone", "0982342814"], ["city", "taipei"], ["created_at", "2016-01-10 06:10:21.524620"], ["updated_at", "2016-01-10 06:10:21.524620"]]
+  [1m[35m (117.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 179ms (ActiveRecord: 158.8ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:10:21 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.3ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bentoshop/modify/2" for ::1 at 2016-01-10 14:10:28 +0800
+Processing by BentoshopController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBentoshop Load (0.2ms)[0m  SELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered bentoshop/modify.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Modify a bento shop</h1>
+    2: <%= form_for @customer, :url => {:controller => "bentoshop", :action => "updating", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :shop_name %>
+    5: 	<br>
+  app/views/bentoshop/modify.html.erb:2:in `_app_views_bentoshop_modify_html_erb___2588626260573016115_70342822260640'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.8ms)
+
+
+Started GET "/bentoshop/modify/2" for ::1 at 2016-01-10 14:10:28 +0800
+Processing by BentoshopController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBentoshop Load (0.2ms)[0m  [1mSELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered bentoshop/modify.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Modify a bento shop</h1>
+    2: <%= form_for @customer, :url => {:controller => "bentoshop", :action => "updating", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :shop_name %>
+    5: 	<br>
+  app/views/bentoshop/modify.html.erb:2:in `_app_views_bentoshop_modify_html_erb___2588626260573016115_70342821463180'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.2ms)
+
+
+Started GET "/bentoshop/modify/2" for ::1 at 2016-01-10 14:10:51 +0800
+Processing by BentoshopController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBentoshop Load (0.3ms)[0m  SELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered bentoshop/modify.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 14:10:51 +0800
+
+
+Started PATCH "/bentoshop/updating/2" for ::1 at 2016-01-10 14:11:05 +0800
+Processing by BentoshopController#updating as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMqQ2XF0pkPBaYbPROaORXpUBg/U9TFC0pbT3IRkm7Ke6gVuTMhF5udUntu2sb5A/+3DYtr1VpB0lwrrzjqSBw==", "bentoshop"=>{"shop_name"=>"大水源", "address"=>"羅斯福路四段111號", "phone"=>"0982342814", "city"=>"taipei"}, "commit"=>"Update Bentoshop", "id"=>"2"}
+  [1m[36mBentoshop Load (0.2ms)[0m  [1mSELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "bentoshops" SET "address" = $1, "updated_at" = $2 WHERE "bentoshops"."id" = $3[0m  [["address", "羅斯福路四段111號"], ["updated_at", "2016-01-10 06:11:05.211013"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 13ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:11:05 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.2ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bentoshop/delete/2" for ::1 at 2016-01-10 14:11:08 +0800
+Processing by BentoshopController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBentoshop Load (0.2ms)[0m  SELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "bentoshops" WHERE "bentoshops"."id" = $1  [["id", 2]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:11:08 +0800
+Processing by BentoshopController#index as HTML
+  [1m[35mBentoshop Load (0.3ms)[0m  SELECT "bentoshops".* FROM "bentoshops"
+  Rendered bentoshop/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 14:11:10 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bentoshop/create" for ::1 at 2016-01-10 14:11:26 +0800
+Processing by BentoshopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aXNn5zexT9ekgkAPv/4grJXluoo17ZmsRxhhxBsoOmyTU/JQCg2scoK/WBtNqRCpEFx/5zvt/n7hGbjzUXYz2Q==", "bentoshop"=>{"shop_name"=>"大水源", "address"=>"羅斯福路四段111號", "phone"=>"093241", "city"=>""}, "commit"=>"Create Bentoshop"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "bentoshops" ("shop_name", "address", "phone", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["shop_name", "大水源"], ["address", "羅斯福路四段111號"], ["phone", "093241"], ["city", ""], ["created_at", "2016-01-10 06:11:26.022443"], ["updated_at", "2016-01-10 06:11:26.022443"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 10ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:11:26 +0800
+Processing by BentoshopController#index as HTML
+  [1m[35mBentoshop Load (0.3ms)[0m  SELECT "bentoshops".* FROM "bentoshops"
+  Rendered bentoshop/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bentoshop/modify/3" for ::1 at 2016-01-10 14:11:28 +0800
+Processing by BentoshopController#modify as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBentoshop Load (0.2ms)[0m  [1mSELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered bentoshop/modify.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/bentoshop/updating/3" for ::1 at 2016-01-10 14:11:35 +0800
+Processing by BentoshopController#updating as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m1KezlbP0CsFyFqkIR9+XMTho7C53xPyZmmrd5BlpBNhcgt5a3MzjiP1QrDTSE5ZQVhm3bffdCDAaHJA2jutpg==", "bentoshop"=>{"shop_name"=>"大水源", "address"=>"羅斯福路四段111號", "phone"=>"093241", "city"=>"Taipei"}, "commit"=>"Update Bentoshop", "id"=>"3"}
+  [1m[35mBentoshop Load (0.2ms)[0m  SELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bentoshops" SET "city" = $1, "updated_at" = $2 WHERE "bentoshops"."id" = $3  [["city", "Taipei"], ["updated_at", "2016-01-10 06:11:35.941999"], ["id", 3]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 11ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 14:11:35 +0800
+Processing by BentoshopController#index as HTML
+  [1m[35mBentoshop Load (0.3ms)[0m  SELECT "bentoshops".* FROM "bentoshops"
+  Rendered bentoshop/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:46:49 +0800
+Processing by DeliverTimeController#index as HTML
+  Rendered deliver_time/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: 		<td>deliver expense</td>
+     6: 		<td>edit / delete</td>
+     7: 	</tr>
+     8: 	<% @deliverTimes.each do |t| %>
+     9: 		<tr>
+    10: 			<td><%= t.deliverTime %></td>
+    11: 			<td><%= t.deliverExpense %></td>
+  app/views/deliver_time/index.html.erb:8:in `_app_views_deliver_time_index_html_erb__279525117418937932_70342810050780'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.7ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:54:02 +0800
+
+SyntaxError (/Users/davidlai/Desktop/db/app/controllers/deliver_time_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/deliver_time_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.3ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:54:15 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[36mDeliverTime Load (14.5ms)[0m  [1mSELECT "deliver_times".* FROM "deliver_times"[0m
+  Rendered deliver_time/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 328ms (Views: 308.3ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 14:54:16 +0800
+
+
+Started GET "/deliver_time/newtime" for ::1 at 2016-01-10 14:54:18 +0800
+Processing by DeliverTimeController#newtime as HTML
+  Rendered deliver_time/newtime.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 30.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:54:35 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jaf520gSliygS6pqVU+jNzRcHyNgO5KtlauBKe5LRhl3h2xsda51iYZ2sn6nGJMyseXaTm479X8zqlgepBVPrA==", "deliver_time"=>{"deliverTime"=>"11:00 ~ 14:00", "deliverExpense"=>"100"}, "commit"=>"Create Deliver time"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: bentoshop):
+  app/controllers/deliver_time_controller.rb:27:in `time'
+  app/controllers/deliver_time_controller.rb:9:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.1ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:55:36 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jaf520gSliygS6pqVU+jNzRcHyNgO5KtlauBKe5LRhl3h2xsda51iYZ2sn6nGJMyseXaTm479X8zqlgepBVPrA==", "deliver_time"=>{"deliverTime"=>"11:00 ~ 14:00", "deliverExpense"=>"100"}, "commit"=>"Create Deliver time"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "deliver_times" ("deliverTime", "deliverExpense", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["deliverTime", "11:00 ~ 14:00"], ["deliverExpense", 100], ["created_at", "2016-01-10 06:55:36.568694"], ["updated_at", "2016-01-10 06:55:36.568694"]]
+  [1m[35m (100.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 127ms (ActiveRecord: 107.7ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:55:36 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[36mDeliverTime Load (0.2ms)[0m  [1mSELECT "deliver_times".* FROM "deliver_times"[0m
+  Rendered deliver_time/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 14:55:36 +0800
+
+
+Started GET "/deliver_time/newtime" for ::1 at 2016-01-10 14:55:39 +0800
+Processing by DeliverTimeController#newtime as HTML
+  Rendered deliver_time/newtime.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:55:53 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q3Wx0zxl02c4T1ejPIsnN+9nTX1Ig2nFx0SQMSKe8JVRVSRkAdkwwh5yT7fO3Bcyat6IEEaDDhdhRUkGaMD5IA==", "deliver_time"=>{"deliverTime"=>"14:00 ~ 17:00", "deliverExpense"=>"120"}, "commit"=>"Create Deliver time"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "deliver_times" ("deliverTime", "deliverExpense", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["deliverTime", "14:00 ~ 17:00"], ["deliverExpense", 120], ["created_at", "2016-01-10 06:55:53.933567"], ["updated_at", "2016-01-10 06:55:53.933567"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 9ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:55:53 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[36mDeliverTime Load (0.2ms)[0m  [1mSELECT "deliver_times".* FROM "deliver_times"[0m
+  Rendered deliver_time/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/deliver_time/newtime" for ::1 at 2016-01-10 14:56:02 +0800
+Processing by DeliverTimeController#newtime as HTML
+  Rendered deliver_time/newtime.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:56:15 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSK96z4DKzprAupqsboiR16no1Pgs89I1aJLezyiPEezAihcA7/In00/8n5D7RJC2x5mPu6zqJpzo5JMdvw18g==", "deliver_time"=>{"deliverTime"=>"17:00 ~ 19:00", "deliverExpense"=>"100"}, "commit"=>"Create Deliver time"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "deliver_times" ("deliverTime", "deliverExpense", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["deliverTime", "17:00 ~ 19:00"], ["deliverExpense", 100], ["created_at", "2016-01-10 06:56:15.443229"], ["updated_at", "2016-01-10 06:56:15.443229"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 9ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:56:15 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[36mDeliverTime Load (0.2ms)[0m  [1mSELECT "deliver_times".* FROM "deliver_times"[0m
+  Rendered deliver_time/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/deliver_time/modify/3" for ::1 at 2016-01-10 14:56:17 +0800
+Processing by DeliverTimeController#modify as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDeliverTime Load (0.2ms)[0m  SELECT  "deliver_times".* FROM "deliver_times" WHERE "deliver_times"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered deliver_time/modify.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/deliver_time/updating/3" for ::1 at 2016-01-10 14:56:26 +0800
+Processing by DeliverTimeController#updating as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VaSlriMoppLLEHUOGGkyswDsEhEmz/a4tXl7gourcp6vhDAZHpRFN+0tbRrqPgK2hVXXfCjPkWoTeKK1wfV7Kw==", "deliver_time"=>{"deliverTime"=>"17:00 ~ 20:00", "deliverExpense"=>"100"}, "commit"=>"Update Deliver time", "id"=>"3"}
+  [1m[36mDeliverTime Load (0.2ms)[0m  [1mSELECT  "deliver_times".* FROM "deliver_times" WHERE "deliver_times"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "deliver_times" SET "deliverTime" = $1, "updated_at" = $2 WHERE "deliver_times"."id" = $3[0m  [["deliverTime", "17:00 ~ 20:00"], ["updated_at", "2016-01-10 06:56:26.850888"], ["id", 3]]
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 10ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:56:26 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[36mDeliverTime Load (0.2ms)[0m  [1mSELECT "deliver_times".* FROM "deliver_times"[0m
+  Rendered deliver_time/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/deliver_time/delete/3" for ::1 at 2016-01-10 14:56:29 +0800
+Processing by DeliverTimeController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mDeliverTime Load (0.2ms)[0m  SELECT  "deliver_times".* FROM "deliver_times" WHERE "deliver_times"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "deliver_times" WHERE "deliver_times"."id" = $1  [["id", 3]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:56:29 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[35mDeliverTime Load (0.2ms)[0m  SELECT "deliver_times".* FROM "deliver_times"
+  Rendered deliver_time/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/deliver_time/newtime" for ::1 at 2016-01-10 14:56:30 +0800
+Processing by DeliverTimeController#newtime as HTML
+  Rendered deliver_time/newtime.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:56:48 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBJh53SFjGNtmEXBnVVcrzGbHsV5MTbxlAU36Mm5HL9eMvRQSTlvxkulXdVvAmyqtCLbqHcxUSMyBO7fg+cVCg==", "deliver_time"=>{"deliverTime"=>"17:00 ~ 20:00", "deliverExpense"=>"100"}, "commit"=>"Create Deliver time"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "deliver_times" ("deliverTime", "deliverExpense", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["deliverTime", "17:00 ~ 20:00"], ["deliverExpense", 100], ["created_at", "2016-01-10 06:56:48.165991"], ["updated_at", "2016-01-10 06:56:48.165991"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 9ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:56:48 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[35mDeliverTime Load (0.3ms)[0m  SELECT "deliver_times".* FROM "deliver_times"
+  Rendered deliver_time/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/deliver_time/newtime" for ::1 at 2016-01-10 14:56:51 +0800
+Processing by DeliverTimeController#newtime as HTML
+  Rendered deliver_time/newtime.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/deliver_time/create" for ::1 at 2016-01-10 14:57:00 +0800
+Processing by DeliverTimeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7EO6x70r9fiLRptjxcZlEeRffcUhYeZGvPXnwpAUGWgWYy9wgJcWXa17g3c3kVUUYea4qC9hgZQa9D712koQ3Q==", "deliver_time"=>{"deliverTime"=>"20:00 ~ 22:00", "deliverExpense"=>"150"}, "commit"=>"Create Deliver time"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "deliver_times" ("deliverTime", "deliverExpense", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["deliverTime", "20:00 ~ 22:00"], ["deliverExpense", 150], ["created_at", "2016-01-10 06:57:01.000645"], ["updated_at", "2016-01-10 06:57:01.000645"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/deliver_time
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-10 14:57:01 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[35mDeliverTime Load (0.2ms)[0m  SELECT "deliver_times".* FROM "deliver_times"
+  Rendered deliver_time/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-10 15:07:35 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[36mBentoOrder Load (12.4ms)[0m  [1mSELECT "bento_orders".* FROM "bento_orders"[0m
+  Rendered bento_order/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 206ms (Views: 181.1ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:07:36 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:07:36 +0800
+
+
+Started GET "/bento" for ::1 at 2016-01-10 15:13:12 +0800
+
+ActionController::RoutingError (No route matches [GET] "/bento"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.2ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-10 15:14:12 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (19.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 79ms (Views: 54.0ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 15:14:13 +0800
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-10 15:14:18 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a bento information</h1>
+    2: <%= form_for @bento, :url => {:controller => "bento", :action => "create", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :item_name %>
+    5: 	<br>
+  app/views/bento/newbento.html.erb:2:in `_app_views_bento_newbento_html_erb___1242709533577819637_70342822601600'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.0ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-10 15:14:18 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a bento information</h1>
+    2: <%= form_for @bento, :url => {:controller => "bento", :action => "create", :id => @bentoshop.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :item_name %>
+    5: 	<br>
+  app/views/bento/newbento.html.erb:2:in `_app_views_bento_newbento_html_erb___1242709533577819637_70342828510280'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.1ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-10 15:14:40 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 15:14:40 +0800
+
+
+Started POST "/bento/create" for ::1 at 2016-01-10 15:17:50 +0800
+Processing by BentoController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kLNYRGkizqzlSifqjM8cwKXyDY6/w3WEye9iCMUcIdFqk83zVJ4tCcN3P/5+mCzFIEvI47HDElZv7rs/j0IoZA==", "bento"=>{"item_name"=>"腿庫飯", "price"=>"80", "bentoshop_id"=>"2"}, "commit"=>"Create Bento"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "bentos" ("item_name", "price", "bentoshop_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["item_name", "腿庫飯"], ["price", 80], ["bentoshop_id", 2], ["created_at", "2016-01-10 07:17:50.317884"], ["updated_at", "2016-01-10 07:17:50.317884"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bento
+Completed 302 Found in 19ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-10 15:17:50 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bento/modify/2" for ::1 at 2016-01-10 15:17:54 +0800
+Processing by BentoController#modify as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBento Load (0.2ms)[0m  [1mSELECT  "bentos".* FROM "bentos" WHERE "bentos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered bento/modify.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-10 15:18:00 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bento/delete/2" for ::1 at 2016-01-10 15:18:01 +0800
+Processing by BentoController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBento Load (0.2ms)[0m  [1mSELECT  "bentos".* FROM "bentos" WHERE "bentos"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "bentos" WHERE "bentos"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/bento
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-10 15:18:01 +0800
+Processing by BentoController#index as HTML
+  [1m[36mBento Load (0.2ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  Rendered bento/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-10 15:18:04 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:30:20 +0800
+Processing by OrderDetailController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `belong_to' for #<Class:0x007ff3eefc4010>):
+  app/models/order_detail.rb:2:in `<class:OrderDetail>'
+  app/models/order_detail.rb:1:in `<top (required)>'
+  app/controllers/order_detail_controller.rb:3:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.3ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:32:59 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[35mOrderDetail Load (2.2ms)[0m  SELECT "order_details".* FROM "order_details"
+  Rendered order_detail/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 165ms (Views: 160.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 15:33:00 +0800
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:33:04 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844585900'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.5ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:33:04 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342840358580'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.2ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:33:49 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @order_detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342820221700'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.7ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:35:31 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @order_detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342820221700'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.1ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:35:42 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844555160'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:37:23 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844555160'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.1ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:37:28 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342784935040'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:37:28 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create", :id => @detail.id} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844555160'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:40:12 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844488960'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.4ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-10 15:40:59 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[36mBentoOrder Load (0.2ms)[0m  [1mSELECT "bento_orders".* FROM "bento_orders"[0m
+  Rendered bento_order/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-10 15:41:01 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 65ms (Views: 55.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:41:26 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[35mOrderDetail Load (0.2ms)[0m  SELECT "order_details".* FROM "order_details"
+  Rendered order_detail/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:41:28 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342786079400'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.6ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:41:28 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844488960'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.6ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-10 15:42:21 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.5ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 15:42:22 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-10 15:42:28 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:42:35 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[35mOrderDetail Load (0.2ms)[0m  SELECT "order_details".* FROM "order_details"
+  Rendered order_detail/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:42:38 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342786079400'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.0ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:42:38 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Add a order detail</h1>
+    2: <%= form_for @detail, :url => {:controller => "order_detail", :action => "create"} do |f| %>
+    3: <div class="field">
+    4: 	<%= f.label :order_id %>
+    5: 	<br>
+  app/views/order_detail/newdetail.html.erb:2:in `_app_views_order_detail_newdetail_html_erb___1445480349552209534_70342844488960'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started GET "/order_detail/newdetail" for ::1 at 2016-01-10 15:45:25 +0800
+Processing by OrderDetailController#newdetail as HTML
+  Rendered order_detail/newdetail.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-10 15:45:25 +0800
+
+
+Started POST "/order_detail/create" for ::1 at 2016-01-10 15:45:35 +0800
+Processing by OrderDetailController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VN52LUGgPDCQYELZkJDrLPVpkYh+hIQFvjV2KlEidxWu/uOafBzflbZdWs1ix9spcNBU5XCE49cYNK8dG3x+oA==", "order_detail"=>{"order_id"=>"1", "item_id"=>"1", "num"=>"34"}, "commit"=>"Create Order detail"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.5ms)[0m  INSERT INTO "order_details" ("order_id", "item_id", "num", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["order_id", 1], ["item_id", 1], ["num", 34], ["created_at", "2016-01-10 07:45:35.601203"], ["updated_at", "2016-01-10 07:45:35.601203"]]
+  [1m[36m (94.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/order_detail
+Completed 302 Found in 108ms (ActiveRecord: 103.8ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:45:35 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[35mOrderDetail Load (0.4ms)[0m  SELECT "order_details".* FROM "order_details"
+  Rendered order_detail/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/order_detail/modify/1" for ::1 at 2016-01-10 15:45:37 +0800
+Processing by OrderDetailController#modify as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered order_detail/modify.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/order_detail/updating/1" for ::1 at 2016-01-10 15:45:41 +0800
+Processing by OrderDetailController#updating as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B1WcmtdCo4IsQ7bTVQy27NbwkLKE8HtSgb99Xof9IV/9dQkt6v5AJwp+rsenW4bpU0lV34rwHIAnvqRpzaMo6g==", "order_detail"=>{"order_id"=>"1", "item_id"=>"1", "num"=>"33"}, "commit"=>"Update Order detail", "id"=>"1"}
+  [1m[35mOrderDetail Load (0.3ms)[0m  SELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "order_details" SET "num" = $1, "updated_at" = $2 WHERE "order_details"."id" = $3  [["num", 33], ["updated_at", "2016-01-10 07:45:41.144791"], ["id", 1]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/order_detail
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:45:41 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[35mOrderDetail Load (0.2ms)[0m  SELECT "order_details".* FROM "order_details"
+  Rendered order_detail/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/order_detail/delete/1" for ::1 at 2016-01-10 15:45:43 +0800
+Processing by OrderDetailController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrderDetail Load (0.3ms)[0m  [1mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "order_details" WHERE "order_details"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/order_detail
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-10 15:45:43 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1mSELECT "order_details".* FROM "order_details"[0m
+  Rendered order_detail/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)

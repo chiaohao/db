@@ -8911,3 +8911,24 @@ Started GET "/admin" for ::1 at 2016-01-10 21:14:43 +0800
 Processing by AdminController#index as HTML
   Rendered admin/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customer" for ::1 at 2016-01-10 21:15:17 +0800
+Processing by CustomerController#index as HTML
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customer/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customer" for ::1 at 2016-01-10 21:15:21 +0800
+Processing by CustomerController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers"
+  Rendered customer/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customer" for ::1 at 2016-01-10 21:15:24 +0800
+Processing by CustomerController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customer/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)

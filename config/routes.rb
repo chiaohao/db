@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
   get 'customer/newcustomer'
   get 'customer' => 'customer#index'
   get 'customer/modify/:id' => 'customer#modify'

@@ -90,6 +90,8 @@ Rails.application.routes.draw do
   put 'order_detail/updating/:id' => 'order_detail#updating'
   put 'order_detail/destroying/:id' => 'order_detail#destroying'
   resources :order_detail
+
+  root 'main_page#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -9101,3 +9101,16 @@ Processing by PrettyOrdershipController#index as HTML
   [1m[35mPrettyOrdership Load (3.7ms)[0m  SELECT "pretty_orderships".* FROM "pretty_orderships"
   Rendered pretty_ordership/index.html.erb within layouts/application (7.7ms)
 Completed 200 OK in 145ms (Views: 136.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-16 01:48:20 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (26.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 1532ms (Views: 1510.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-16 01:48:22 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-16 01:48:22 +0800

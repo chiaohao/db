@@ -2,11 +2,13 @@
 <table border='2'>
 	<tr>
 		<td>deliver time</td>
+		<td>deliver time</td>
 		<td>deliver expense</td>
 		<td>edit / delete</td>
 	</tr>
 	<% @deliverTimes.each do |t| %>
 		<tr>
+			<td><%= t.id %></td>
 			<td><%= t.deliverTime %></td>
 			<td><%= t.deliverExpense %></td>
 			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>

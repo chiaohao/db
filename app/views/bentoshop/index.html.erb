@@ -1,6 +1,7 @@
 <h1>Bento Shop</h1>
 <table border='2'>
 	<tr>
+		<td>shop id</td>
 		<td>shop_name</td>
 		<td>address</td>
 		<td>phone</td>
@@ -9,6 +10,7 @@
 	</tr>
 	<% @bentoshops.each do |t| %>
 		<tr>
+			<td><%= t.id %></td>
 			<td><%= t.shop_name %></td>
 			<td><%= t.address %></td>
 			<td><%= t.phone %></td>

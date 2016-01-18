@@ -1,6 +1,7 @@
 <h1>All Pretty</h1>
 <table border='2'>
 	<tr>
+		<td>pretty id</td>
 		<td>name</td>
 		<td>prettyStyle</td>
 		<td>strength</td>
@@ -9,6 +10,7 @@
 	</tr>
 	<% @pretties.each do |t| %>
 		<tr>
+			<td><%= t.id %></td>
 			<td><%= t.name %></td>
 			<td><%= t.prettyStyle %></td>
 			<td><%= t.strength %></td>

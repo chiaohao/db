@@ -1,6 +1,7 @@
 <h1>All Bento Order</h1>
 <table border='2'>
 	<tr>
+		<td>bento order id</td>
 		<td>orderDate</td>
 		<td>totalPrice</td>
 		<td>customer_id</td>
@@ -10,6 +11,7 @@
 	</tr>
 	<% @bentoOrders.each do |t| %>
 		<tr>
+			<td><%= t.id %></td>
 			<td><%= t.orderDate %></td>
 			<td><%= t.totalPrice %></td>
 			<td><%= t.customer_id %></td>

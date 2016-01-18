@@ -1,6 +1,7 @@
 <h1>Order Detail</h1>
 <table border='2'>
 	<tr>
+		<td>Order detail id</td>
 		<td>Order id</td>
 		<td>Item id</td>
 		<td>Number</td>
@@ -8,6 +9,7 @@
 	</tr>
 	<% @details.each do |t| %>
 		<tr>
+			<td><%= t.id %></td>
 			<td><%= t.order_id %></td>
 			<td><%= t.item_id %></td>
 			<td><%= t.num %></td>

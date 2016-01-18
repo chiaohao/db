@@ -97,6 +97,7 @@ Rails.application.routes.draw do
 
   root 'main_page#index'
   post 'main_page/login'
+  get 'main_page/logout'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

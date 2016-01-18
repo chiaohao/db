@@ -1,15 +1,24 @@
 <h1>Homepage</h1>
-<%= form_for @customer, :url => {:controller => "main_page", :action => "login"} do |f| %>
+<% if @username==nil %>
 
-<div class="field">
-	<%= f.label :account %>
-	<%= f.text_field :account %>
-</div>
-<div class="field">
-	<%= f.label :password %>
-	<%= f.text_field :password %>
-</div>
-<div class="actions">
-	<%= f.submit %>
-</div>
+	<%= form_for @customer, :url => {:controller => "main_page", :action => "login"} do |f| %>
+
+		<div class="field">
+			<%= f.label :account %>
+			<%= f.text_field :account %>
+		</div>
+		<div class="field">
+			<%= f.label :password %>
+			<%= f.text_field :password %>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>
+<% else %>
+	<div>Welcome, 
+		<%= @username %>
+	</div>
+	<br>
+	<%= link_to "Log out", :action => "logout" %>
 <% end %>

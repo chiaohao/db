@@ -10265,3 +10265,3337 @@ NoMethodError (undefined method `account' for #<Customer::ActiveRecord_Relation:
   Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
   Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (44.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 14:48:31 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (24.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (121.8ms)
+Completed 200 OK in 1534ms (Views: 1404.0ms | ActiveRecord: 72.3ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 14:48:38 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kdj8LlztlPsrNkjt7MY7rr8450e902IuNpvq0ENeRv+cnoepDbzkqR0V6kTCRohZXf+SGfgkAEDEBeYdhy4ZEQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35mCustomer Load (43.7ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 43.9ms)
+
+NoMethodError (undefined method `city' for nil:NilClass):
+  app/controllers/main_page_controller.rb:10:in `block in login'
+  app/controllers/main_page_controller.rb:9:in `login'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.8ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 14:48:54 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kdj8LlztlPsrNkjt7MY7rr8450e902IuNpvq0ENeRv+cnoepDbzkqR0V6kTCRohZXf+SGfgkAEDEBeYdhy4ZEQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 148ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:55 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 14:48:56 +0800
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:10:59 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BF84TGvwPvqadnw5aUm5BRJ3F2pqHSz05OADnqdgcjAJGUPLOqFOqKxV3pBHyQry8LBiNC/qTpoWfg9TYxAt3g==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35mCustomer Load (4.4ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "bbbb"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 15:10:59 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:12:27 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OJ4Su/Yd0snfaBcFq760agCMvhQ6TpeasUwkYdKnDn812Gk8p0yim+lLtayFPged4kvLSn+59fRD0iisFtdRkQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 15:12:28 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 145ms (Views: 141.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:17:41 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ybzd1r0F93N48albb/Zw7ne++xPbWsu69AwsvQoz/oNs+qZR7FSHIU7SC/JBdsMZlXmOTZ6tqdQGkiBwzkOhbQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms)
+
+NoMethodError (undefined method `count' for #<Customer:0x000000043141e8>):
+  app/controllers/main_page_controller.rb:10:in `block in login'
+  app/controllers/main_page_controller.rb:9:in `login'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.2ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:18:06 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ybzd1r0F93N48albb/Zw7ne++xPbWsu69AwsvQoz/oNs+qZR7FSHIU7SC/JBdsMZlXmOTZ6tqdQGkiBwzkOhbQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.2ms)
+
+NoMethodError (undefined method `count' for #<Customer:0x007f272cdfb150>):
+  app/controllers/main_page_controller.rb:10:in `block in login'
+  app/controllers/main_page_controller.rb:9:in `login'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.5ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:39:58 +0800
+
+SyntaxError (/home/chiaohao/Desktop/db/app/controllers/main_page_controller.rb:11: syntax error, unexpected ')', expecting tSTRING_DEND
+			puts "bbbbbbbbbbbbbb#{a.city)}bbbbbbbbbbbbbb"
+			                             ^
+/home/chiaohao/Desktop/db/app/controllers/main_page_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+		redirect_to(:action => "index")
+		                             ^
+/home/chiaohao/Desktop/db/app/controllers/main_page_controller.rb:14: unterminated string meets end of file
+/home/chiaohao/Desktop/db/app/controllers/main_page_controller.rb:14: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  app/controllers/main_page_controller.rb:11: syntax error, unexpected ')', expecting tSTRING_DEND
+  app/controllers/main_page_controller.rb:14: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+  app/controllers/main_page_controller.rb:14: unterminated string meets end of file
+  app/controllers/main_page_controller.rb:14: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (32.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (67.1ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ybzd1r0F93N48albb/Zw7ne++xPbWsu69AwsvQoz/oNs+qZR7FSHIU7SC/JBdsMZlXmOTZ6tqdQGkiBwzkOhbQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:13 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 15:40:14 +0800
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 15:40:30 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rbyo30Jzq07Dq0kuUCK0Z3jIVMfEOJc6mFO9Sfxeabf8IkkLFi+/w0tD42XwDkmfyRUDVrngDIY/0I444EmSA==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "bbbb"]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "bbbb"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 15:40:30 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 16:00:42 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/9gagqA8PYIt3gNRoBD5CI+LE7/lNJUGjPjrtm+kBe2uRvtW9GApD6U2qRoAPATwPlZELpjsDrore9jHc7P+Q==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:00:42 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 113ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 16:08:07 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m5prnk3lBLgI2I3B25GuqtkCAts2LFEz0mwwRrYW1beW3BAZHLR06j77L2j1ER1dO8V3hXPbM10g8jyLcmaKWQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:08:07 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:38:40 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (undefined local variable or method `cookie' for #<#<Class:0x007f272ced5b70>:0x007f272cee1cb8>):
+    1: <h1>Homepage</h1>
+    2: <% if cookie[:key]==nil %>
+    3: 
+    4: 	<%= form_for @customer, :url => {:controller => "main_page", :action => "login"} do |f| %>
+    5: 
+  app/views/main_page/index.html.erb:2:in `_app_views_main_page_index_html_erb__3805993649030492472_69903117124960'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (53.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 91ms (Views: 72.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:44 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:41:45 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:44:26 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (36.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f2724058ac8>:0x007f2738e1cb28>):
+    21: 	</div>
+    22: 	<br>
+    23: 	<div class = "actions">
+    24: 		<%= f.submit %>
+    25: 	</div>
+    26: <% end %>
+  app/views/main_page/index.html.erb:24:in `_app_views_main_page_index_html_erb__3805993649030492472_69903217376000'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:45:26 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:26 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:26 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:26 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:45:27 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:46:09 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 85ms (Views: 65.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:09 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:09 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:10 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:46:35 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 96ms (Views: 83.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:35 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:35 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:36 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:37 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:46:38 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:47:38 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 125ms (Views: 105.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:47:39 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:48:33 +0800
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 16:48:36 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nsaw/P4kgOP2JdXbQNlXSGo/0J+JJBE0fe4yDmuOTyHaRmcZXakNojf/rJEKxXE6t+RESqa6KtiDqvd+RHo4CQ==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36m (3.0ms)[0m  [1mSELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:48:36 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 88ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 101ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:51:37 +0800
+
+
+Started GET "/?method=delete" for 127.0.0.1 at 2016-01-18 16:52:19 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"delete"}
+  Rendered main_page/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=delete" for 127.0.0.1 at 2016-01-18 16:52:21 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"delete"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=delete" for 127.0.0.1 at 2016-01-18 16:53:33 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"delete"}
+  Rendered main_page/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 69ms (Views: 59.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:53:34 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:53:34 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:01 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 93ms (Views: 83.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:01 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:01 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:01 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:55:02 +0800
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:03 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:04 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:04 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:04 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:04 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:55:04 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=logout" for 127.0.0.1 at 2016-01-18 16:56:27 +0800
+Processing by MainPageController#index as HTML
+  Parameters: {"method"=>"logout"}
+  Rendered main_page/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:27 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:56:28 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:56:30 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:56:31 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:56:31 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:56:31 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:56:31 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:57:44 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `event_path' for #<#<Class:0x007f273007bf58>:0x007f272cabba30>):
+    20: 		<%= @username %>
+    21: 	</div>
+    22: 	<br>
+    23: 	<%= link_to "Log out", event_path("logout") %>
+    24: <% end %>
+  app/views/main_page/index.html.erb:23:in `_app_views_main_page_index_html_erb__3805993649030492472_69903114949300'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (79.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 100ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:58:49 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 144ms (Views: 121.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:30 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+ActionController::RoutingError (No route matches [GET] "/main_page/logout"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.6ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.6ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 16:59:31 +0800
+
+ActionController::RoutingError (No route matches [GET] "/main_page/logout"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/chiaohao/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/chiaohao/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 123ms (Views: 106.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:45 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:46 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:47 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:48 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 16:59:53 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:23 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:24 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:00:33 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 183ms (Views: 156.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:33 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:33 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:34 +0800
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 17:00:37 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UsR/Hh7pRw31Qv//zA9l8+7d7iqAldGPBknIqjQLv/EWRKj7vWTKTDSYhrWGE0OBMwZ6/68L6mP4DQ3aG//I2Q==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+  [1m[35mCustomer Load (0.9ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:00:37 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 17:00:38 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:38 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:38 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:39 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout?account=index" for 127.0.0.1 at 2016-01-18 17:00:40 +0800
+Processing by MainPageController#logout as HTML
+  Parameters: {"account"=>"index"}
+Redirected to http://localhost:3000/main_page/logout?account=index
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 108ms (Views: 91.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:00:59 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:01:00 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:01:00 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:01:00 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-01-18 17:01:00 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-01-18 17:01:00 +0800
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 17:01:02 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VNKMqFhj/41yudCqDfqMKC9SylmwWj+p1GrY7ocURMgQUltN++5yzLNjqeBH5qpa8olejJ/EBEUqLh2eqOAz4A==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+  [1m[35mCustomer Load (2.1ms)[0m  SELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:01:02 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 17:01:03 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:01:03 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 17:01:07 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBogK0dh3YgU0OGtdH+zN0jzOdB4ZifMAH+mI8m61GY4mvfO5OxQydUKmOc+Y5VFlSitBVf4HCD+O2NT5k6jTg==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "bbbb"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:01:07 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/main_page/login" for 127.0.0.1 at 2016-01-18 17:01:11 +0800
+Processing by MainPageController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V6zAHQ9N11acAYA232BT+5j+hu3ZXurQckofNoXhnxsTLBf4rMBaF13b+XyVfHWJRSUSOPbA0TyMDtpGqhXoMw==", "customer"=>{"account"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Create Customer"}
+  [1m[35m (2.1ms)[0m  SELECT COUNT(*) FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2  [["account", "test"], ["password", "aaaa"]]
+  [1m[36mCustomer Load (1.5ms)[0m  [1mSELECT "customers".* FROM "customers" WHERE "customers"."account" = $1 AND "customers"."password" = $2[0m  [["account", "test"], ["password", "aaaa"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:01:11 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main_page/logout" for 127.0.0.1 at 2016-01-18 17:01:12 +0800
+Processing by MainPageController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-18 17:01:12 +0800
+Processing by MainPageController#index as HTML
+  Rendered main_page/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.0ms)

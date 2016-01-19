@@ -1,0 +1,9 @@
+<h1>Order Page</h1>
+<%= form_tag '/order_page', :url => {:controller => "order_detail", :action => "create"} do %>
+
+<% array = Bento.all.map { |bento| [bento.item_name, bento.id] } %>
+<%= select_tag(:bento_id, options_for_select(array)) %>
+
+<%= collection_select(:qqq,:city_id, Bento.all, :id, :item_name) %>
+<%= :qqq %>
+<% end %>

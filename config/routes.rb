@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'admin' => 'admin#index'
 
+  get 'order_page' => 'order_page#neworder'
+
   get 'customer/newcustomer'
   get 'customer' => 'customer#index'
   get 'customer/modify/:id' => 'customer#modify'

@@ -14763,3 +14763,1745 @@ Started GET "/" for ::1 at 2016-01-19 01:52:11 +0800
 Processing by MainPageController#index as HTML
   Rendered main_page/index.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 63ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 02:21:32 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 364ms (Views: 363.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 02:21:32 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:21:33 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:21:33 +0800
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 02:21:38 +0800
+Processing by BentoOrderController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidlai/db/app/models/bento_order.rb:5: syntax error, unexpected ','
+	has_many :pretty_orderships, , :dependent => :delete_all
+	                              ^
+/Users/davidlai/db/app/models/bento_order.rb:7: syntax error, unexpected ','
+	has_many :orderDetails, , :dependent => :delete_all
+	                         ^):
+  app/models/bento_order.rb:5: syntax error, unexpected ','
+  app/models/bento_order.rb:7: syntax error, unexpected ','
+  app/controllers/bento_order_controller.rb:3:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.2ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 02:21:38 +0800
+Processing by BentoOrderController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/davidlai/db/app/models/bento_order.rb:5: syntax error, unexpected ','
+	has_many :pretty_orderships, , :dependent => :delete_all
+	                              ^
+/Users/davidlai/db/app/models/bento_order.rb:7: syntax error, unexpected ','
+	has_many :orderDetails, , :dependent => :delete_all
+	                         ^):
+  app/models/bento_order.rb:5: syntax error, unexpected ','
+  app/models/bento_order.rb:7: syntax error, unexpected ','
+  app/controllers/bento_order_controller.rb:3:in `index'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (96.9ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 02:22:40 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[35mBentoOrder Load (14.3ms)[0m  SELECT "bento_orders".* FROM "bento_orders"
+  Rendered bento_order/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 84ms (Views: 62.7ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:40 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 02:22:41 +0800
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-19 02:22:44 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-19 02:22:55 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-19 02:23:29 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 02:23:37 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[36mBentoOrder Load (0.2ms)[0m  [1mSELECT "bento_orders".* FROM "bento_orders"[0m
+  Rendered bento_order/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 02:23:53 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 02:25:42 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[35mBentoOrder Load (0.3ms)[0m  SELECT "bento_orders".* FROM "bento_orders"
+  Rendered bento_order/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-19 02:57:50 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 86ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento_order/newbento_order" for ::1 at 2016-01-19 03:14:47 +0800
+Processing by BentoOrderController#newbento_order as HTML
+  Rendered bento_order/newbento_order.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 101ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 03:14:47 +0800
+
+
+Started GET "/admin" for ::1 at 2016-01-19 03:14:52 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 03:14:55 +0800
+Processing by BentoController#index as HTML
+  [1m[36mBento Load (0.6ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  Rendered bento/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 03:14:58 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+     8: <div class="field">
+     9: 	<%= f.label :price %>
+    10: 	<br>
+    11: 	<%= f.select :price %>
+    12: </div>
+    13: <div class="field">
+    14: 	<%= f.label :bentoshop_id %>
+  app/views/bento/newbento.html.erb:11:in `block in _app_views_bento_newbento_html_erb__4214386144945305924_70200312869520'
+  app/views/bento/newbento.html.erb:2:in `_app_views_bento_newbento_html_erb__4214386144945305924_70200312869520'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.7ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 03:14:58 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+     8: <div class="field">
+     9: 	<%= f.label :price %>
+    10: 	<br>
+    11: 	<%= f.select :price %>
+    12: </div>
+    13: <div class="field">
+    14: 	<%= f.label :bentoshop_id %>
+  app/views/bento/newbento.html.erb:11:in `block in _app_views_bento_newbento_html_erb__4214386144945305924_70200293560280'
+  app/views/bento/newbento.html.erb:2:in `_app_views_bento_newbento_html_erb__4214386144945305924_70200293560280'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.1ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 03:15:31 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 03:15:32 +0800
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 10:28:16 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 102ms (Views: 89.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:28:17 +0800
+
+
+Started GET "/bento_order" for ::1 at 2016-01-19 10:28:26 +0800
+Processing by BentoOrderController#index as HTML
+  [1m[35mBentoOrder Load (0.4ms)[0m  SELECT "bento_orders".* FROM "bento_orders"
+  Rendered bento_order/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 58ms (Views: 49.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 10:29:20 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 63ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-19 10:29:23 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[36mOrderDetail Load (13.0ms)[0m  [1mSELECT "order_details".* FROM "order_details"[0m
+  Rendered order_detail/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 64ms (Views: 47.6ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 10:29:56 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deliver_time" for ::1 at 2016-01-19 10:29:57 +0800
+Processing by DeliverTimeController#index as HTML
+  [1m[35mDeliverTime Load (26.5ms)[0m  SELECT "deliver_times".* FROM "deliver_times"
+  Rendered deliver_time/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 81ms (Views: 49.7ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 10:29:59 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/order_detail" for ::1 at 2016-01-19 10:30:03 +0800
+Processing by OrderDetailController#index as HTML
+  [1m[36mOrderDetail Load (0.4ms)[0m  [1mSELECT "order_details".* FROM "order_details"[0m
+  Rendered order_detail/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:33:41 +0800
+
+ActionController::RoutingError (No route matches [GET] "/order_page"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.2ms)
+
+
+Started GET "/order_page/neworder.html" for ::1 at 2016-01-19 10:34:23 +0800
+
+ActionController::RoutingError (No route matches [GET] "/order_page/neworder.html"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/Cellar/ruby/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (116.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.4ms)
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:35:31 +0800
+Processing by OrderPageController#neworder as HTML
+  Rendered order_page/neworder.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 83ms (Views: 61.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:39:48 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:39:48 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:43:51 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.3ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:51 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:43:52 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:46:19 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.3ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:19 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:19 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:19 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:46:20 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:46:32 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.2ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:46:32 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:46:35 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.8ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  Rendered order_page/neworder.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:46:35 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 10:56:54 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  Rendered order_page/neworder.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:54 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 10:56:55 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 11:00:28 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[35mBento Load (0.3ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (wrong number of arguments (4 for 5..7)):
+    4: <% array = Bento.all.map { |bento| [bento.item_name, bento.id] } %>
+    5: <%= select_tag(:bento_id, options_for_select(array)) %>
+    6: 
+    7: <%= collection_select(:city_id, Bento.all, :id, :item_name) %>
+    8: <% end %>
+  app/views/order_page/neworder.html.erb:7:in `block in _app_views_order_page_neworder_html_erb__2780472861547303625_70200269814240'
+  app/views/order_page/neworder.html.erb:2:in `_app_views_order_page_neworder_html_erb__2780472861547303625_70200269814240'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.6ms)
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 11:00:52 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.3ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 11:00:53 +0800
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 11:01:34 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.3ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bento.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bento_order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/deliver_time.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bentoshop.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/customer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/main_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/order_detail.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/order_page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pay_way.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pretty.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pretty_ordership.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bento.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bento_order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/bentoshop.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/customer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/deliver_time.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/main_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/order_detail.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/order_page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pay_way.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pretty.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/pretty_ordership.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-19 11:01:35 +0800
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:16:02 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 158ms (Views: 155.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:16:10 +0800
+Processing by BentoController#index as HTML
+  [1m[36mBento Load (0.5ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  Rendered bento/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:16:14 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:16:16 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.3ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 11:16:18 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bento/create" for ::1 at 2016-01-19 11:16:35 +0800
+Processing by BentoController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2DaZMawAp7tkJbdBNc1AIydsAmK9MLEr/Ic9IIqPKIkiFgyGkbxEHkIYr1XHmnAmotXHD7Mw1vlahuQXwNEhPA==", "bento"=>{"item_name"=>"吵免", "price"=>"111", "bentoshop_id"=>"1"}, "commit"=>"Create Bento"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  INSERT INTO "bentos" ("item_name", "price", "bentoshop_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["item_name", "吵免"], ["price", 111], ["bentoshop_id", 1], ["created_at", "2016-01-19 03:16:35.798712"], ["updated_at", "2016-01-19 03:16:35.798712"]]
+  [1m[36m (115.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bento
+Completed 302 Found in 127ms (ActiveRecord: 121.7ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:16:35 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:16:41 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-19 11:16:44 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.3ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bentoshop/newshop" for ::1 at 2016-01-19 11:16:45 +0800
+Processing by BentoshopController#newshop as HTML
+  Rendered bentoshop/newshop.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/bentoshop/create" for ::1 at 2016-01-19 11:17:00 +0800
+Processing by BentoshopController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KIahPIWemmyj097ZRbkYvidFnN38HRXcLxQjLVIQILLSpjSLuCJ5yYXuxs237ii7ovxZsPIdcg6JFfoaGE4pBw==", "bentoshop"=>{"shop_name"=>"男八", "address"=>"我是", "phone"=>"23435123", "city"=>"fewfw"}, "commit"=>"Create Bentoshop"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bentoshops" ("shop_name", "address", "phone", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["shop_name", "男八"], ["address", "我是"], ["phone", "23435123"], ["city", "fewfw"], ["created_at", "2016-01-19 03:17:00.145385"], ["updated_at", "2016-01-19 03:17:00.145385"]]
+  [1m[35m (4.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 9ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-19 11:17:00 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.4ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:17:09 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:17:11 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.3ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bento/newbento" for ::1 at 2016-01-19 11:17:14 +0800
+Processing by BentoController#newbento as HTML
+  Rendered bento/newbento.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/bento/create" for ::1 at 2016-01-19 11:17:24 +0800
+Processing by BentoController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eByvR3A52lnPvO8aAOTtsTYtuTpoqm7eiWjk3cbi1AGCPDrwTYU5/OmB9w7ys920s5R8V2aqCQwvaT3qjLzdtA==", "bento"=>{"item_name"=>"吵慢", "price"=>"1111", "bentoshop_id"=>"6"}, "commit"=>"Create Bento"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "bentos" ("item_name", "price", "bentoshop_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["item_name", "吵慢"], ["price", 1111], ["bentoshop_id", 6], ["created_at", "2016-01-19 03:17:24.477619"], ["updated_at", "2016-01-19 03:17:24.477619"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/bento
+Completed 302 Found in 9ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:17:24 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:17:27 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-19 11:17:29 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.3ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bentoshop/delete/6" for ::1 at 2016-01-19 11:17:31 +0800
+Processing by BentoshopController#delete as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mBentoshop Load (0.2ms)[0m  SELECT  "bentoshops".* FROM "bentoshops" WHERE "bentoshops"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "bentos" WHERE "bentos"."bentoshop_id" = $1  [["bentoshop_id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "bentoshops" WHERE "bentoshops"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/bentoshop
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/bentoshop" for ::1 at 2016-01-19 11:17:31 +0800
+Processing by BentoshopController#index as HTML
+  [1m[36mBentoshop Load (0.3ms)[0m  [1mSELECT "bentoshops".* FROM "bentoshops"[0m
+  Rendered bentoshop/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for ::1 at 2016-01-19 11:17:33 +0800
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bento" for ::1 at 2016-01-19 11:17:34 +0800
+Processing by BentoController#index as HTML
+  [1m[35mBento Load (0.2ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered bento/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/order_page" for ::1 at 2016-01-19 11:20:21 +0800
+Processing by OrderPageController#neworder as HTML
+  [1m[36mBento Load (0.3ms)[0m  [1mSELECT "bentos".* FROM "bentos"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "bentos".* FROM "bentos"
+  Rendered order_page/neworder.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.3ms)

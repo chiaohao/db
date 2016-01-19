@@ -1,5 +1,5 @@
 <h1>Homepage</h1>
-<% if @username==nil %>
+<% if @username==nil then %>
 
 	<%= form_for @customer, :url => {:controller => "main_page", :action => "login"} do |f| %>
 
@@ -12,13 +12,25 @@
 			<%= f.text_field :password %>
 		</div>
 		<div class="actions">
-			<%= f.submit %>
+			<%= f.submit "Login" %>
 		</div>
 	<% end %>
-<% else %>
+	<%= link_to "Register", :action => "register" %>
+<% elsif @username=="admin" then %>
 	<div>Welcome, 
 		<%= @username %>
 	</div>
+	<%= link_to "Admin page", "admin" %>
+	<br>
+	<br>
+	<%= link_to "Log out", :action => "logout" %>
+<% else %>
+	<%= link_to "bentoshop", "bentoshop" %>
+	<br>
+	<%= link_to "bento", "bento" %>
+	<br>
+	<%= link_to "pretty", "pretty" %>
+	<br>
 	<br>
 	<%= link_to "Log out", :action => "logout" %>
 <% end %>

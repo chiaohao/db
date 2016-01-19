@@ -1,27 +1,48 @@
 class BentoshopController < ApplicationController
 	def index
 		@bentoshops = Bentoshop.all
+		@username = cookies[:key]
 	end
 	def newshop
-		@bentoshop = Bentoshop.new
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@bentoshop = Bentoshop.new
+		end
 	end
 	def create
-		@bentoshop = Bentoshop.new(shop)
-		@bentoshop.save
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@bentoshop = Bentoshop.new(shop)
+			@bentoshop.save
+			redirect_to(:action => "index")
+		end
 	end
 	def modify
-		@bentoshop = Bentoshop.find(params[:id])
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@bentoshop = Bentoshop.find(params[:id])
+		end
 	end
 	def updating
-		@bentoshop = Bentoshop.find(params[:id])
-		@bentoshop.update_attributes(shop)
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@bentoshop = Bentoshop.find(params[:id])
+			@bentoshop.update_attributes(shop)
+			redirect_to(:action => "index")
+		end
 	end
 	def delete
-		@bentoshop = Bentoshop.find(params[:id])
-		@bentoshop.destroy
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@bentoshop = Bentoshop.find(params[:id])
+			@bentoshop.destroy
+			redirect_to(:action => "index")
+		end
 	end
 	def shop
 		params.require(:bentoshop).permit(:shop_name, :address, :phone, :city)

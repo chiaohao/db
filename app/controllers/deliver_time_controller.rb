@@ -1,27 +1,51 @@
 class DeliverTimeController < ApplicationController
 	def index
-		@deliverTimes = DeliverTime.all
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTimes = DeliverTime.all
+		end
 	end
 	def newtime
-		@deliverTime = DeliverTime.new
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTime = DeliverTime.new
+		end
 	end
 	def create
-		@deliverTime = DeliverTime.new(time)
-		@deliverTime.save
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTime = DeliverTime.new(time)
+			@deliverTime.save
+			redirect_to(:action => "index")
+		end
 	end
 	def modify
-		@deliverTime = DeliverTime.find(params[:id])
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTime = DeliverTime.find(params[:id])
+		end
 	end
 	def updating
-		@deliverTime = DeliverTime.find(params[:id])
-		@deliverTime.update_attributes(time)
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTime = DeliverTime.find(params[:id])
+			@deliverTime.update_attributes(time)
+			redirect_to(:action => "index")
+		end
 	end
 	def delete
-		@deliverTime = DeliverTime.find(params[:id])
-		@deliverTime.destroy
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@deliverTime = DeliverTime.find(params[:id])
+			@deliverTime.destroy
+			redirect_to(:action => "index")
+		end
 	end
 	def time
 		params.require(:deliver_time).permit(:deliverTime, :deliverExpense)

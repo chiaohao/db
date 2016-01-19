@@ -5,7 +5,6 @@ class MainPageController < ApplicationController
 	end
 	def login
 		@c = Customer.new(cusparam)
-		puts "aaaaaaaaaaaaaa#{@c.account}, #{@c.password}aaaaaaaaaaaaaa"
 		@customer = Customer.where(account: @c.account, password: @c.password)
 		if @customer.count!=0 then
 			@customer.each do |s|
@@ -13,6 +12,9 @@ class MainPageController < ApplicationController
 			end
 		end
 		redirect_to(:action => "index")
+	end
+	def register
+		redirect_to("/customer/newcustomer")
 	end
 	def logout
 		cookies.delete :key

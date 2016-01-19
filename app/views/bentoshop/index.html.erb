@@ -6,7 +6,9 @@
 		<td>address</td>
 		<td>phone</td>
 		<td>city</td>
-		<td>edit / delete</td>
+		<% if @username=="admin" %>
+			<td>edit / delete</td>
+		<% end %>
 	</tr>
 	<% @bentoshops.each do |t| %>
 		<tr>
@@ -15,9 +17,13 @@
 			<td><%= t.address %></td>
 			<td><%= t.phone %></td>
 			<td><%= t.city %></td>
-			<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>
+			<% if @username=="admin" %>
+				<td><%= link_to 'edit' , :action => 'modify', :id => t.id %> / <%= link_to 'delete' , :action => 'delete', :id => t.id %></td>
+			<% end %>
 		</tr>
 	<% end %>
 </table>
-<p><%= link_to 'Create new bento shop', 'bentoshop/newshop' %></p>
+<% if @username=="admin" %>
+	<p><%= link_to 'Create new bento shop', 'bentoshop/newshop' %></p>
+<% end %>
 <p><%= link_to 'Back', 'admin' %></p>

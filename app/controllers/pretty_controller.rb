@@ -1,27 +1,48 @@
 class PrettyController < ApplicationController
 	def index
 		@pretties = Pretty.all
+		@username = cookies[:key]
 	end
 	def newpretty
-		@pretty = Pretty.new
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@pretty = Pretty.new
+		end
 	end
 	def create
-		@pretty = Pretty.new(prettyparam)
-		@pretty.save
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@pretty = Pretty.new(prettyparam)
+			@pretty.save
+			redirect_to(:action => "index")
+		end
 	end
 	def modify
-		@pretty = Pretty.find(params[:id])
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@pretty = Pretty.find(params[:id])
+		end
 	end
 	def updating
-		@pretty = Pretty.find(params[:id])
-		@pretty.update_attributes(prettyparam)
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@pretty = Pretty.find(params[:id])
+			@pretty.update_attributes(prettyparam)
+			redirect_to(:action => "index")
+		end
 	end
 	def delete
-		@pretty = Pretty.find(params[:id])
-		@pretty.destroy
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to(:action => "index")
+		else
+			@pretty = Pretty.find(params[:id])
+			@pretty.destroy
+			redirect_to(:action => "index")
+		end
 	end
 	def prettyparam
 		params.require(:pretty).permit(:name, :prettyStyle, :strength, :city)

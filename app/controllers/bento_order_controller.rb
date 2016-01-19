@@ -1,27 +1,51 @@
 class BentoOrderController < ApplicationController
 	def index
-		@bentoOrders = BentoOrder.all
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrders = BentoOrder.all
+		end
 	end
 	def newbento_order
-		@bentoOrder = BentoOrder.new
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrder = BentoOrder.new
+		end
 	end
 	def create
-		@bentoOrder = BentoOrder.new(boparam)
-		@bentoOrder.save
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrder = BentoOrder.new(boparam)
+			@bentoOrder.save
+			redirect_to(:action => "index")
+		end
 	end
 	def modify
-		@bentoOrder = BentoOrder.find(params[:id])
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrder = BentoOrder.find(params[:id])
+		end
 	end
 	def updating
-		@bentoOrder = BentoOrder.find(params[:id])
-		@bentoOrder.update_attributes(boparam)
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrder = BentoOrder.find(params[:id])
+			@bentoOrder.update_attributes(boparam)
+			redirect_to(:action => "index")
+		end
 	end
 	def delete
-		@bentoOrder = BentoOrder.find(params[:id])
-		@bentoOrder.destroy
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@bentoOrder = BentoOrder.find(params[:id])
+			@bentoOrder.destroy
+			redirect_to(:action => "index")
+		end
 	end
 	def boparam
 		params.require(:bento_order).permit(:orderDate, :totalPrice, :customer_id, :payWay_id, :deliverTime_id)

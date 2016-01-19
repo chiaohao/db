@@ -1,27 +1,51 @@
 class CustomerController < ApplicationController
 	def index
-		@customers = Customer.all
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customers = Customer.all
+		end
 	end
 	def newcustomer
-		@customer = Customer.new
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customer = Customer.new
+		end
 	end
 	def create
-		@customer = Customer.new(cusparam)
-		@customer.save
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customer = Customer.new(cusparam)
+			@customer.save
+			redirect_to(:action => "index")
+		end
 	end
 	def modify
-		@customer = Customer.find(params[:id])
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customer = Customer.find(params[:id])
+		end
 	end
 	def updating
-		@customer = Customer.find(params[:id])
-		@customer.update_attributes(cusparam)
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customer = Customer.find(params[:id])
+			@customer.update_attributes(cusparam)
+			redirect_to(:action => "index")
+		end
 	end
 	def delete
-		@customer = Customer.find(params[:id])
-		@customer.destroy
-		redirect_to(:action => "index")
+		if cookies[:key]!="admin" then
+			redirect_to("/")
+		else
+			@customer = Customer.find(params[:id])
+			@customer.destroy
+			redirect_to(:action => "index")
+		end
 	end
 	def cusparam
 		params.require(:customer).permit(:cname, :account, :password, :city, :address, :phone)
